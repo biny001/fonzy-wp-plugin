@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Fonzy - AI Content Publisher
- * Plugin URI: https://fonzy.ai
+ * Plugin URI: https://fonzy.ai/wordpress
  * Description: Connects your WordPress site to Fonzy.ai for automated article publishing with SEO meta support.
  * Version: 1.0.0
  * Author: Fonzy.ai
