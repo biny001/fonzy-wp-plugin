@@ -89,8 +89,8 @@ class Fonzy_Settings {
 					<li>
 						<?php
 						printf(
-							/* translators: %s: link to Fonzy dashboard */
 							wp_kses(
+								/* translators: %s: link to Fonzy dashboard */
 								__( 'In your %s, go to <strong>Settings &rarr; Integrations &rarr; WordPress</strong>.', 'fonzy-ai-content-publisher' ),
 								array( 'a' => array( 'href' => array(), 'target' => array(), 'rel' => array() ), 'strong' => array() )
 							),

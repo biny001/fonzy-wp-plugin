@@ -31,16 +31,6 @@ require_once FONZY_PLUGIN_DIR . 'includes/class-fonzy-publisher.php';
 require_once FONZY_PLUGIN_DIR . 'includes/class-fonzy-settings.php';
 
 /**
- * Load plugin text domain for translations.
- *
- * @since 1.0.0
- */
-function fonzy_load_textdomain() {
-	load_plugin_textdomain( 'fonzy-ai-content-publisher', false, dirname( FONZY_PLUGIN_BASENAME ) . '/languages' );
-}
-add_action( 'init', 'fonzy_load_textdomain' );
-
-/**
  * Initialize the plugin.
  *
  * @since 1.0.0

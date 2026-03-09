@@ -79,8 +79,10 @@ class Fonzy_Publisher {
 		if ( ! empty( $params['thumbnail'] ) ) {
 			$thumb_result = $this->set_featured_image( $post_id, $params['thumbnail'], $title );
 			if ( is_wp_error( $thumb_result ) ) {
-				// Non-fatal: log but don't fail the whole publish.
-				error_log( 'Fonzy: Failed to set featured image — ' . $thumb_result->get_error_message() );
+				// Non-fatal: log via WP debug but don't fail the whole publish.
+				if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+					wp_trigger_error( __FUNCTION__, 'Fonzy: Failed to set featured image — ' . $thumb_result->get_error_message(), E_USER_NOTICE );
+				}
 			}
 		}
 
