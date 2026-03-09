@@ -185,7 +185,7 @@ class Fonzy_Publisher {
 		if ( empty( $url ) ) {
 			return new WP_Error(
 				'fonzy_empty_url',
-				__( 'Thumbnail URL is empty.', 'fonzy' )
+				__( 'Thumbnail URL is empty.', 'fonzy-ai-content-publisher' )
 			);
 		}
 
@@ -194,7 +194,7 @@ class Fonzy_Publisher {
 		if ( ! in_array( $scheme, array( 'http', 'https' ), true ) ) {
 			return new WP_Error(
 				'fonzy_invalid_url',
-				__( 'Thumbnail URL must use http or https.', 'fonzy' )
+				__( 'Thumbnail URL must use http or https.', 'fonzy-ai-content-publisher' )
 			);
 		}
 

@@ -65,44 +65,44 @@ class Fonzy_REST_API {
 					'validate_callback' => function ( $value ) {
 						return is_string( $value ) && ! empty( trim( $value ) );
 					},
-					'description'       => __( 'The article title.', 'fonzy' ),
+					'description'       => __( 'The article title.', 'fonzy-ai-content-publisher' ),
 				),
 				'content'         => array(
 					'type'              => 'string',
 					'default'           => '',
 					'sanitize_callback' => 'wp_kses_post',
-					'description'       => __( 'The article HTML content.', 'fonzy' ),
+					'description'       => __( 'The article HTML content.', 'fonzy-ai-content-publisher' ),
 				),
 				'slug'            => array(
 					'type'              => 'string',
 					'default'           => '',
 					'sanitize_callback' => 'sanitize_title',
-					'description'       => __( 'The URL slug for the post.', 'fonzy' ),
+					'description'       => __( 'The URL slug for the post.', 'fonzy-ai-content-publisher' ),
 				),
 				'metatitle'       => array(
 					'type'              => 'string',
 					'default'           => '',
 					'sanitize_callback' => 'sanitize_text_field',
-					'description'       => __( 'SEO meta title.', 'fonzy' ),
+					'description'       => __( 'SEO meta title.', 'fonzy-ai-content-publisher' ),
 				),
 				'metadescription' => array(
 					'type'              => 'string',
 					'default'           => '',
 					'sanitize_callback' => 'sanitize_text_field',
-					'description'       => __( 'SEO meta description.', 'fonzy' ),
+					'description'       => __( 'SEO meta description.', 'fonzy-ai-content-publisher' ),
 				),
 				'thumbnail'       => array(
 					'type'              => 'string',
 					'default'           => '',
-					'description'       => __( 'URL of the featured image.', 'fonzy' ),
+					'description'       => __( 'URL of the featured image.', 'fonzy-ai-content-publisher' ),
 				),
 				'keywords'        => array(
 					'default'           => '',
-					'description'       => __( 'Comma-separated tags or array of tag names.', 'fonzy' ),
+					'description'       => __( 'Comma-separated tags or array of tag names.', 'fonzy-ai-content-publisher' ),
 				),
 				'category'        => array(
 					'default'           => '',
-					'description'       => __( 'Category name, slug, or ID.', 'fonzy' ),
+					'description'       => __( 'Category name, slug, or ID.', 'fonzy-ai-content-publisher' ),
 				),
 				'status'          => array(
 					'type'              => 'string',
@@ -112,7 +112,7 @@ class Fonzy_REST_API {
 						$allowed = array( 'publish', 'draft', 'pending', 'private' );
 						return in_array( $value, $allowed, true );
 					},
-					'description'       => __( 'Post status. One of: publish, draft, pending, private.', 'fonzy' ),
+					'description'       => __( 'Post status. One of: publish, draft, pending, private.', 'fonzy-ai-content-publisher' ),
 				),
 			),
 		) );
@@ -145,7 +145,7 @@ class Fonzy_REST_API {
 		if ( ! current_user_can( 'publish_posts' ) ) {
 			return new WP_Error(
 				'fonzy_unauthorized',
-				__( 'You must authenticate with a user that has publish_posts capability.', 'fonzy' ),
+				__( 'You must authenticate with a user that has publish_posts capability.', 'fonzy-ai-content-publisher' ),
 				array( 'status' => 401 )
 			);
 		}

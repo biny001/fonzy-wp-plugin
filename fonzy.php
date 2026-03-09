@@ -8,7 +8,7 @@
  * Author URI: https://fonzy.ai
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: fonzy
+ * Text Domain: fonzy-ai-content-publisher
  * Domain Path: /languages
  * Requires at least: 5.6
  * Requires PHP: 7.4
@@ -36,7 +36,7 @@ require_once FONZY_PLUGIN_DIR . 'includes/class-fonzy-settings.php';
  * @since 1.0.0
  */
 function fonzy_load_textdomain() {
-	load_plugin_textdomain( 'fonzy', false, dirname( FONZY_PLUGIN_BASENAME ) . '/languages' );
+	load_plugin_textdomain( 'fonzy-ai-content-publisher', false, dirname( FONZY_PLUGIN_BASENAME ) . '/languages' );
 }
 add_action( 'init', 'fonzy_load_textdomain' );
 
